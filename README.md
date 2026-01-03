@@ -1,4 +1,4 @@
-# Anecho 🔇
+# Anecho
 > *Silencing the noise in the NISQ era.*
 
 **Anecho** is a hardware-agnostic error mitigation library designed to bridge the gap between noisy quantum hardware and reliable algorithmic results. 
