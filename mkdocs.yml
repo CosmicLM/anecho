@@ -1,0 +1,16 @@
+site_name: Anecho Documentation
+theme:
+  name: material
+
+plugin:
+ - search
+ - mkdocstrings:
+    handlers:
+      python:
+        paths: [src]
+
+nav:
+  - Home: index.md
+  - Mitigation:
+      - ZNE Manager: references/zne.md
+  - Noise Models: references/noise.md
