@@ -1,7 +1,7 @@
 # Anecho
 > *Silencing the noise in the NISQ era.*
 
-**Anecho** is a hardware-agnostic error mitigation library designed to bridge the gap between noisy quantum hardware and reliable algorithmic results. 
+**Anecho** is a hardware-agnostic error mitigation library and engine designed to bridge the gap between noisy quantum hardware and reliable algorithmic results. 
 
 Currently in active development, Anecho focuses on **Zero-Noise Extrapolation (ZNE)** techniques that are adaptable to both Superconducting (IBM) and Neutral Atom (PASQAL) architectures.
 
