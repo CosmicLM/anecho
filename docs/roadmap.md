@@ -23,14 +23,16 @@ The thesis being tested:
 
 | | |
 | --- | --- |
-| Calendar weeks available | 20 (Aug 10 – Dec 27) |
+| Calendar weeks | 21 (Aug 10 – Dec 31; W21 is partial) |
+| Working weeks planned | 18 (W1–W18) |
 | Realistic working pace | 8–10 h/week alongside coursework |
 | Total | ~130–160 h |
 | Thanksgiving | Nov 26 (W16) |
 | Finals | ~W17–W18 — assume near-zero throughput |
-| Last genuinely productive week | **W18, ending Dec 13** |
+| **Internal ship date** | **W18, Dec 13** |
+| Deadline | Dec 31 (W21) |
 
-W19–W20 are slack, not workspace. If the plan is consuming them, something
+W19–W21 are slack, not workspace. If the plan is consuming them, something
 earlier has to be cut — see [What to cut](#what-to-cut-when-behind).
 
 !!! tip "The weekly ritual"
@@ -160,6 +162,11 @@ Branch on W7:
   complete thesis
 - **W7 overran** → finish it here
 
+**Done when:** the thesis claim is written down in the lab notebook in the exact
+form the W7 data supports — either the original wording, or a narrowed one. The
+rest of the plan is built on whatever you write here, so do not leave it
+ambiguous.
+
 ---
 
 ## Phase 4 — Hardening the result (W9–W10)
@@ -240,6 +247,7 @@ rewrite, and it buys back a week.
 
 ## Phase 6 — Delivery (W14–W18)
 
+
 ### W14 · Nov 9–15 · Docs and API polish
 **~9 h**
 
@@ -249,27 +257,95 @@ what actually shipped; add a one-command script that reproduces every figure.
 **Done when:** `mkdocs build --strict` passes with real API reference, and a
 stranger can reproduce the results table from the README.
 
-### W15 · Nov 16–22 · Paper draft
-**~10 h** · Methods and results, drawn from the lab notebook.
+### W15 · Nov 16–22 · Paper — methods and results
+**~10 h**
 
-### W16 · Nov 23–29 · Thanksgiving week
-**~4 h** · Assume low throughput. Introduction and related work — the least
-demanding sections.
+The heaviest writing week, scheduled before Thanksgiving and finals rather than
+after. Both sections are largely assembly if the lab notebook has been kept.
 
-### W17–W18 · Nov 30–Dec 13 · Finals overlap
-**~6 h/week** · Discussion, limitations, revision. Assume finals dominate.
+- Methods: the pipeline, the equal-budget protocol, the Mitiq validation
+- Results: W10's headline table, plus the decay curves from W6
 
-Limitations to state plainly — each is already documented and pre-empting them
-is stronger than being asked:
+**Done when:** methods and results are drafted end to end, and every number in
+them traces back to a dated lab-notebook entry.
 
-- ZNE's variance cost and how the equal-budget comparison handles it
-- State fidelity being simulation-only; why the headline observable is
+### W16 · Nov 23–29 · Thanksgiving week — low-demand sections
+**~4 h** · Thanksgiving is Nov 26.
+
+Deliberately the lightest week in the plan. Introduction, background, and
+related work are the most interruptible sections — they need reading and
+citation, not sustained reasoning, so they survive being done in fragments.
+
+- Introduction and problem statement
+- Related work: Mitiq, M3, layer fidelity, the folding literature already
+  collected in [Layer Profiling](references/layer-profiling.md)
+
+**Done when:** introduction and related work are drafted with citations pulled.
+
+### W17 · Nov 30–Dec 6 · Discussion and limitations
+**~6 h** · Finals begin to dominate.
+
+State the limitations plainly. Each is already documented, and pre-empting them
+reads as rigor; being asked about them cold does not.
+
+- ZNE's variance cost, and how the equal-budget protocol accounts for it
+- State fidelity being simulation-only — why the headline observable is
   QPU-measurable instead
 - Regime A profiling not generalizing past ~25–30 qubits
-- Whatever W12's single hardware point can and cannot support
+- Exactly what W12's single hardware point can and cannot support
+- Anything the W7 result failed to show
 
-### W19–W20 · Dec 14–27 · Slack
-Absorption for overruns and finals. **Not** workspace.
+**Done when:** discussion and limitations are drafted.
+
+### W18 · Dec 7–13 · Full-draft revision — **the real ship date**
+**~6 h**
+
+Read the whole thing start to finish in one sitting and fix the seams between
+sections written weeks apart. Write the abstract and conclusion **last**, once
+you know what the paper actually says.
+
+**Done when:** a complete draft exists that you would submit if forced to today.
+
+!!! danger "Treat Dec 13 as the deadline, not Dec 31"
+    Everything after this week is buffer that finals will probably consume. A
+    plan that requires W19–W21 to go well is a plan with no margin at all.
+
+---
+
+## Phase 7 — Buffer and submission (W19–W21)
+
+*These three weeks exist to absorb overrun. The checklists below are what to do
+only if nothing needs absorbing — they are not scheduled work.*
+
+### W19 · Dec 14–20 · Absorption, or reproducibility audit
+**~4 h**
+
+If W1–W18 landed clean, spend this catching the failure that embarrasses
+capstones: results that only reproduce on the machine that made them.
+
+- Clone the repo fresh into a clean venv, install from the pinned deps
+- Regenerate every figure and the headline table from scratch
+- Fix whatever breaks — hardcoded paths, unpinned versions, unseeded RNG
+
+**Done when:** a fresh clone reproduces the headline table without manual
+intervention.
+
+### W20 · Dec 21–27 · Absorption, or final polish
+**~3 h**
+
+- Proofread the full draft
+- Freeze dependency versions; tag a release
+- Confirm `mkdocs build --strict` still passes against the final code
+
+**Done when:** the repo is tagged and the draft is proofread.
+
+### W21 · Dec 28–31 · Submission
+**~2 h** · Partial week — the deadline lands Dec 31.
+
+Submit. **Build nothing new this week.** Any change made here is a change
+nobody has time to verify.
+
+**Done when:** submitted.
 
 ---
 
