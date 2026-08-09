@@ -2,15 +2,20 @@ site_name: Anecho Documentation
 theme:
   name: material
 
-plugin:
- - search
- - mkdocstrings:
-    handlers:
-      python:
-        paths: [src]
+markdown_extensions:
+  - admonition
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
 
 nav:
   - Home: index.md
   - Mitigation:
       - ZNE Manager: references/zne.md
   - Noise Models: references/noise.md
+  - Profiling:
+      - Layer / Micro-Shot Profiling: references/layer-profiling.md
