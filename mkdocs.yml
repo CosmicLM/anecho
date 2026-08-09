@@ -14,6 +14,8 @@ plugins:
 
 nav:
   - Home: index.md
+  - Build Roadmap: roadmap.md
+  - Lab Notebook: lab-notebook.md
   - Mitigation:
       - ZNE Manager: references/zne.md
   - Noise Models: references/noise.md
