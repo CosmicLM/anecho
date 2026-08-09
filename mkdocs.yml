@@ -1,0 +1,23 @@
+site_name: Anecho Documentation
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+
+nav:
+  - Home: index.md
+  - Build Roadmap: roadmap.md
+  - Lab Notebook: lab-notebook.md
+  - Mitigation:
+      - ZNE Manager: references/zne.md
+  - Noise Models: references/noise.md
+  - Profiling:
+      - Layer / Micro-Shot Profiling: references/layer-profiling.md
