@@ -3,6 +3,45 @@
 Week-by-week plan from **2026-08-10** to the capstone deadline of
 **2026-12-31**. Deliverables are a written paper and a working repo.
 
+## Re-plan — 2026-10-17 (this section overrides the dates below)
+
+As of 2026-10-17 (end of W10) none of W1–W10 has shipped. The repo holds only
+`experiments/01_baseline_noise.py`, and the ZNE values in
+`experiments/quantum_benchmarks.csv` are placeholders, not results. The plan
+below compresses the never-cut weeks into the eight weeks left before the
+internal ship date. The week contents further down still describe *what* each
+step is and when it is done; only the calendar changes.
+
+**Working mode:** I write all the code myself. AI assistance is limited to
+specs, explanations, and code review. Check the capstone's AI policy with the
+advisor before W-A starts; the paper is written by me regardless.
+
+| Week | Dates | Work | Original weeks |
+| --- | --- | --- | --- |
+| W-A | Oct 19–25 | Repo foundation; observables and shot-based `⟨O⟩ ± σ` | W1 + W2 |
+| W-B | Oct 26–Nov 1 | Walking skeleton (folding, extrapolation, `run()`); equal-budget harness | W3 + W4 |
+| W-C | Nov 2–8 | Mitiq validation; layer profiler | W5 + W6 |
+| W-D | Nov 9–15 | ⚠ **The experiment** — adaptive vs fixed ZNE at equal budget | W7 |
+| W-E | Nov 16–22 | Decision point (write the claim the data supports); statistics and headline table | W8 + W10 |
+| W-F | Nov 23–29 | Paper: introduction and related work (Thanksgiving, Nov 26) | W16 |
+| W-G | Nov 30–Dec 6 | Paper: methods and results | W15 |
+| W-H | Dec 7–13 | Paper: discussion, limitations, full-draft revision — **internal ship date** | W17 + W18 |
+
+Dec 14–31 stays buffer (W19–W21 below), not workspace.
+
+**Cut**, per [What to cut](#what-to-cut-when-behind): W13 Rust kernel, W12
+hardware run, W11 SPAM. W9 FakeKyoto returns only if a week finishes early.
+
+**What changed about risk:** the thesis is now tested in mid-November, not
+September, which leaves about one week to pivot instead of seven. The fallback
+claim — *the profile predicts when ZNE helps and when it costs more than it
+returns* — is a complete thesis, so the W-E decision must be written down even
+if W-D goes badly.
+
+**Pace check:** W-A and W-B each pack two original weeks (~17–18 h). Writing
+every line myself is the slowest working mode, so if W-A is not done by Oct 25,
+re-plan that weekend rather than letting the slip carry forward.
+
 ## How this plan is ordered
 
 It is **not** one component per week. Two principles override that:
